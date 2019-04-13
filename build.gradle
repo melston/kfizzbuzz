@@ -20,3 +20,53 @@ dokka {
     outputFormat = 'html'
     outputDirectory = "$buildDir/javadoc"
 }
+
+task kfb1a(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz1a.Kfizzbuzz1aKt"
+}
+
+task kfb1b(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz1b.Kfizzbuzz1bKt"
+}
+
+task kfb1c(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz1c.Kfizzbuzz1cKt"
+}
+
+task kfb2a(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz2a.Kfizzbuzz2aKt"
+}
+
+task kfb2b(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz2b.Kfizzbuzz2bKt"
+}
+
+task kfb2c(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz2c.Kfizzbuzz2cKt"
+}
+
+task kfb2d(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz2d.Kfizzbuzz2dKt"
+}
+
+task kfb3(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz3.Kfizzbuzz3Kt"
+}
+
+task kfb4(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz4.Kfizzbuzz4Kt"
+}
+
+task kfb5(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.elsoft.kfizzbuzz5.Kfizzbuzz5Kt"
+}
