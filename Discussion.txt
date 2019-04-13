@@ -1,0 +1,117 @@
+
+kfizzbuzz1a.kt
+-----------------
+
+Describe problem.
+
+Describe solution.
+
+Now, what happens if we want to change the problem to add in handling of 
+multiples of 7 with the string 'bang'.
+
+  105 - fizzbuzzbang
+  35 - buzzbang
+  21 - fizzbang
+  15 - fizzbuzz
+  7 - bang
+  5 - buzz
+  3 - fizz
+
+kfizzbuzz1b.kt
+-------------------
+
+Define a function 'addStr' that takes the divisor, the string associated with the divisor, 
+the number to check, and an 'accumulator' string. 
+
+If the number is evenly divided by the divisor then append the string to the accumulator 
+string and return the new accumulator string.  If the number isn't evenly divided by the 
+divisor then  return the original accumulator string unchanged.
+
+Inside our loop we will create an 'accumulator' string that starts out as empty. Then call 
+the addStr function as seen here.  The return value is then passed in to the next stage as 
+the new accumulator string.
+
+At the end, if the accumulator string has something in it then print this value out.  
+Otherwise print out the integer as a string.
+
+This is much simpler and easier to extend with additional numbers.
+
+But we can go farther.
+
+First, notice that we have a kind of mapping between the integer and the 'accumulator' string.
+This mapping changes depending on what set of numbers we are trying to check as divisors.
+
+Kotlin, like C#, allows the creation of 'extension' functions that look like methods on types.
+Kotlin has a type called Pair, that is a non-homogeneous 2-element Tuple type.  The two elements
+are accessed with the 'first' and 'second' methods (actually property names) on the Pair instance.
+
+extensions.kt
+---------------
+
+I took the liberty of creating an extension function called 'map' that takes a function.  This
+function takes a Pair<Int, String> and returns a Pair<Int, String>).  Map applies this supplied
+function to the Pair it is called on and returns the result.  It is a HOF.
+
+This is a typical kind of operation in FP environments.  This function is typically called 'map',
+but it is also called 'fmap' or 'select' or other names as well.  Just be aware that it is defined
+like this:
+
+map:  A -> (A -> B) -> B
+
+I also created a 'toStringVal' extension method that does the checking of the 'accumulator' string
+and returns either the non-empty accumulator string or the string representation of the integer.
+
+kfizzbuzz2a.kt
+--------------
+
+So, let's see this in action.
+
+This is a bit wordy but we will make it better in a short bit.
+
+Notice that we are providing a lambda function to both of the map function calls.  The only
+difference between them is the divisor and the string.
+
+This suggest an improvement we can make.  Simply create a function that takes the parameters
+and performs the lambda.
+
+kfizzbuzz2b.kt
+---------------
+
+Here we have the function 'modStr' which is very similar to the 'addStr' function we defined
+before.  The difference is that it takes a Pair<Int, String> (and divisor, and string) and
+returns a Pair<Int, String>.
+
+This example also shows the two ways a one-argument lambda can be defined.  You can name the
+argument explicitly, as in the first line, or you can leave it unnamed as in the next two lines.
+In the latter case the parameter can be access with the default name of 'it'.
+
+kfizzbuzz2c.kt
+---------------
+
+This next example is exactly the same as the previous one except that we made the 'addDivStr'
+function an extension function on Pair<Int, String>.  It doesn't change the example much.
+
+kfizzbuzz3.kt
+---------------
+
+This last example is an example of a HOF that returns a function which can be called later.
+Here 'genFBFun' is a function that takes a divisor and its associated string and returns a
+function that takes the Pair to be checked and creates a new Pair according to our rules.
+
+Inside of our main function we first create three functions by calling our 'genFBFun'
+function. Then we loop over the numbers and call 'map' using our generated functions.  
+The result is the same as before.
+
+kfizzbuzz3.kt
+---------------
+
+Finally, here is a more 'functional' approach.  
+
+The first line after creating our mapping functions creates a range object.  This is 
+mapped to a function that creates the initial Pair object for our analysis.  This is
+followed by the successive transformation functions for the accumulator string.  The
+final transformation is to a single string value.  Finally, we call 'foreach' which is
+a 'terminal' operation as it performs an action but doesn't return a value.  In this
+case it simply prints out the string it receives.
+
+
