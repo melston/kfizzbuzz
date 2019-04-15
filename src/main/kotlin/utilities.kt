@@ -55,7 +55,9 @@ fun genFBFun(div: Int, toAdd: String) : (Pair<Int, String>) -> Pair<Int, String>
 
 // Infix functions must be member or extension functions!
 /**
- * An extension function on KFunction1<P1, R1> taking a second function as its
+ * A function to compose two functions, the second one taking the output of the first one.
+ *
+ * This is an extension function on KFunction1<P1, R1> taking a second function as its
  * parameter.  It passes the result of calling `this` with a value of type P1
  * and passes that result to the the parameter function, `f`, returning
  * the result.

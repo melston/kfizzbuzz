@@ -7,9 +7,9 @@ fun main(args: Array<String>) {
     for (i in 1 .. 105) {
         val str =
                 Pair(i, "")
-                .map { p -> if (p.first % 3 == 0) Pair(p.first, p.second+"fizz"); else p; }
-                .map { p -> if (p.first % 5 == 0) Pair(p.first, p.second+"buzz"); else p; }
-                .map { p -> if (p.first % 7 == 0) Pair(p.first, p.second+"bang"); else p; }
+                .map {if (it.first % 3 == 0) Pair(it.first, it.second+"fizz"); else it; }
+                .map {if (it.first % 5 == 0) Pair(it.first, it.second+"buzz"); else it; }
+                .map {if (it.first % 7 == 0) Pair(it.first, it.second+"bang"); else it; }
                 .toStringVal()
 
         println(str)

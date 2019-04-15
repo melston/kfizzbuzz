@@ -5,7 +5,6 @@ import com.elsoft.utilities.genFBFun
 
 fun main(args: Array<String>) {
 
-    // genFBFun defined in utilities.kt
     val fizz3 = genFBFun(3, "fizz")  // fizz3 is a function: (Pair) -> Pair
     val buzz5 = genFBFun(5, "buzz")
     val bang7 = genFBFun(7, "bang")
