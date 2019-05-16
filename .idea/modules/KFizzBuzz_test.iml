@@ -6,7 +6,7 @@
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/../../build/classes/kotlin/test" />
-          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.30/459999be0d6ac844dd3d2ca85c2daf14deb5f7f0/kotlin-stdlib-jdk8-1.3.30.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.9.0/3dd71b51838f78ae1b606fe0550b3cdd68bdcaf2/vavr-0.9.0.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.30/bf0edcf669e446e0d903a0681190d1e3df969ac4/kotlin-stdlib-jdk7-1.3.30.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.30/9ea98e65c246d34de9af59c104ad9bdea4908ee/kotlin-stdlib-1.3.30.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/io.vavr/vavr-match/0.9.0/454a1d2167c6dd46d3536b8d5db1b78fbc4a2c91/vavr-match-0.9.0.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.30/989a125fdb6e4d0d75a016032e03e1e3b57a13d/kotlin-stdlib-common-1.3.30.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
+          <option name="classpath" value="$MODULE_DIR$/../../build/classes/java/main;D:/Sync/Dropbox/Projects/KFizzBuzz/build/classes/kotlin/main;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.30/459999be0d6ac844dd3d2ca85c2daf14deb5f7f0/kotlin-stdlib-jdk8-1.3.30.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.9.0/3dd71b51838f78ae1b606fe0550b3cdd68bdcaf2/vavr-0.9.0.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.30/bf0edcf669e446e0d903a0681190d1e3df969ac4/kotlin-stdlib-jdk7-1.3.30.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.30/9ea98e65c246d34de9af59c104ad9bdea4908ee/kotlin-stdlib-1.3.30.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/io.vavr/vavr-match/0.9.0/454a1d2167c6dd46d3536b8d5db1b78fbc4a2c91/vavr-match-0.9.0.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.30/989a125fdb6e4d0d75a016032e03e1e3b57a13d/kotlin-stdlib-common-1.3.30.jar;C:/Users/mark.elston/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="KFizzBuzz" />
@@ -34,7 +34,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
+    <output-test url="file://$MODULE_DIR$/../../out/test/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
